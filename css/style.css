@@ -1,0 +1,162 @@
+:root {
+    --americano: #8D7C6E;
+    --camouflage-green: #5e685b;
+    --mint-julep: #dfd9b1;
+    --trinidad: #C34226;
+    --fire-bush: #EB9D3E;
+    --magnolia: #F9F8FD;
+
+    --green-white: #EFF0E8;
+    --pumice: #BCBDBC;
+    --makara: #8C7B6B;
+    --mongoose: #B19A7C;
+    --heavy-metal: #292C2A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav__items {
+    /* Positioning */
+
+    /* Display & Box Model */
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    /* Color */
+
+    background-color: #EAE4CA;
+    /* Text */
+
+    list-style-type: none;
+    /* Other */
+    box-shadow: 0 0.25em 0.4em rgba(50, 50, 93, .11);
+}
+
+.main-nav__item {
+    /* Positioning */
+
+    /* Display & Box Model */
+    margin: 1.5em;
+    padding: 0;
+    max-width: 100%;
+    /* Color */
+
+    /* Text */
+
+
+    /* Other */
+}
+.main-nav__item a {
+    color: var(--camouflage-green);
+
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .025em;
+
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.middle-line {
+    position: relative;
+    width: 100%;
+    height: 20em;
+    /*background-color: var(--pumice);*/
+    background-image: url("../img/fon-listia-zelenyi-uzor.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+
+}
+
+.middle-line__title {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    color: var(--heavy-metal);
+    font-weight: 300;
+    text-align: center;
+    line-height: inherit;
+}
+
+.apartments {
+    width: 100%;
+}
+
+.apartments__row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #EAE4CA;
+}
+
+.apartments__item {
+    margin: 1em;
+    box-sizing: border-box;
+    width: 25%;
+    background-color: var(--magnolia);
+    border-radius: 1em;
+    box-shadow: 0 0.25em 0.4em rgba(50, 50, 93, .11);
+    opacity: 80%;
+}
+
+.apartments__item-image {
+
+}
+
+.apartments__item-link {
+    color: var(--camouflage-green);
+    text-decoration: none;
+}
+
+.apartments__image {
+    width: 100%;
+    border-radius: 1em 1em 0 0;
+}
+
+.apartments__item-caption {
+    display: flex;
+    justify-content: space-around;
+}
+
+.apartments__item-description, .apartments__item-price {
+    padding: .5em;
+}
+
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #505336;
+}
+
+.main-footer__A1, .main-footer__MTC, .main-footer__address {
+    margin: 1em;
+    color: white;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.apartments__item:hover {
+    box-shadow: 14px 6px 100px 100px rgba(0, 0, 0, 0.54) inset;
+}
+
+
