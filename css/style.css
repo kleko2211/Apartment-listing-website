@@ -1,162 +1,248 @@
-:root {
-    --americano: #8D7C6E;
-    --camouflage-green: #5e685b;
-    --mint-julep: #dfd9b1;
-    --trinidad: #C34226;
-    --fire-bush: #EB9D3E;
-    --magnolia: #F9F8FD;
-
-    --green-white: #EFF0E8;
-    --pumice: #BCBDBC;
-    --makara: #8C7B6B;
-    --mongoose: #B19A7C;
-    --heavy-metal: #292C2A;
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
 }
 
-* {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Oswald', sans-serif;
 }
 
-.body {
+h1, h2, h3, h4, h5, h6 {
     margin: 0;
-    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(50, 111, 111, 0.4) 7%, rgba(184, 200, 201, 0.6) 73%), url("../img/mainSlider.jpg"), center, no-repeat;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+.intro__inner {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    max-width: 800px;
+}
+
+.intro__suptitle {
+    margin-bottom: 1rem;
+    color: whitesmoke;
+    font-family: 'Caveat', cursive;
+    font-size: 4rem;
+    text-space: 1.5;
+}
+
+.intro__title {
+    color: whitesmoke;
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.intro__title:after {
+    content: "";
+    display: block;
+    margin: 4rem auto 4rem;
+    width: 7rem;
+    height: .3rem;
+    background-color: whitesmoke;
 }
 
 .main-header {
-    margin: 0;
-    padding: 0;
+    padding-top: 2rem;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+}
+
+.main-nav {
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .main-nav__items {
-    /* Positioning */
-
-    /* Display & Box Model */
-    display: flex;
-    justify-content: flex-end;
     margin: 0;
     padding: 0;
-    max-width: 100%;
-    /* Color */
-
-    background-color: #EAE4CA;
-    /* Text */
-
-    list-style-type: none;
-    /* Other */
-    box-shadow: 0 0.25em 0.4em rgba(50, 50, 93, .11);
 }
 
 .main-nav__item {
-    /* Positioning */
-
-    /* Display & Box Model */
-    margin: 1.5em;
-    padding: 0;
-    max-width: 100%;
-    /* Color */
-
-    /* Text */
-
-
-    /* Other */
+    display: inline-block;
+    list-style-type: none;
 }
+
 .main-nav__item a {
-    color: var(--camouflage-green);
-
-    font-size: 1.05rem;
-    font-weight: 300;
-    text-align: center;
+    position: relative;
+    margin: 0 15px;
+    color: #333333;
+    vertical-align: top;
     text-decoration: none;
-    letter-spacing: .025em;
-
-    opacity: 60%;
+    transition: color .2s linear;
     cursor: pointer;
 }
 
-.middle-line {
-    position: relative;
+.main-nav__item a:after {
+    display: block;
     width: 100%;
-    height: 20em;
-    /*background-color: var(--pumice);*/
-    background-image: url("../img/fon-listia-zelenyi-uzor.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-
-}
-
-.middle-line__title {
+    height: 0.1rem;
+    content: "";
     position: absolute;
-    top: 40%;
-    left: 30%;
-    color: var(--heavy-metal);
-    font-weight: 300;
-    text-align: center;
-    line-height: inherit;
+    top: 120%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .2s linear;
 }
 
-.apartments {
-    width: 100%;
+.main-nav__item a:hover {
+    color: whitesmoke;
 }
 
-.apartments__row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #EAE4CA;
+.main-nav__item a:hover:after {
+    opacity: 1;
+    background-color: whitesmoke;
 }
 
-.apartments__item {
-    margin: 1em;
-    box-sizing: border-box;
-    width: 25%;
-    background-color: var(--magnolia);
-    border-radius: 1em;
-    box-shadow: 0 0.25em 0.4em rgba(50, 50, 93, .11);
-    opacity: 80%;
-}
-
-.apartments__item-image {
-
-}
-
-.apartments__item-link {
-    color: var(--camouflage-green);
+.intro__btn {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: inline-block;
+    vertical-align: top;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: bold;
     text-decoration: none;
+    text-align: center;
+    border: 3px solid whitesmoke;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s linear,
+    color .2s linear;
 }
 
-.apartments__image {
+.intro__btn:hover {
+    background-color: whitesmoke;
+    color: #333;
+}
+
+.slider {
     width: 100%;
-    border-radius: 1em 1em 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-.apartments__item-caption {
+.intro__slider-items {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem auto 0;
+}
+
+.intro__slider-item {
+    position: relative;
+    padding: 1rem 0;
+    display: inline-block;
+    color: #333;
+    list-style-type: none;
+    font-size: 1.2rem;
+    width: 20%;
+    text-align: left;
+    text-transform: uppercase;
+    border-top: .2rem solid whitesmoke;
+}
+
+.aparts-section {
+    padding: 5rem 0;
+    scroll-behavior: smooth;
+}
+
+.aparts-section__header {
+    margin: 0 auto 3rem;
+    width: 100%;
+    max-width: 950px;
+    text-align: center;
+}
+
+.aparts-section__suptitle {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: #333;
+}
+
+.aparts-section__title {
+    font-size: 2rem;
+    color: #333;
+}
+
+.aparts-section__title:after {
+    content: "";
+    display: block;
+    margin: 2rem auto 0;
+    width: 10%;
+    height: 0.2rem;
+    background-color: #9CB1B5;
+}
+
+.aparts__items-row {
     display: flex;
     justify-content: space-around;
 }
 
-.apartments__item-description, .apartments__item-price {
-    padding: .5em;
+.aparts__item {
+    width: 350px;
 }
 
-.main-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #505336;
+.aparts__item:hover .aparts__item-image {
+    transform: translate3d(-10px, -10px, 0);
 }
 
-.main-footer__A1, .main-footer__MTC, .main-footer__address {
-    margin: 1em;
-    color: white;
-    font-size: 1em;
-    font-weight: 300;
+.aparts__item:hover .aparts__item-image .aparts__img {
+    opacity: .1;
 }
 
-.apartments__item:hover {
-    box-shadow: 14px 6px 100px 100px rgba(0, 0, 0, 0.54) inset;
+.aparts__item-image {
+    background: linear-gradient(45deg, rgb(244, 246, 245), rgb(153, 181, 186) 55%);
+    transition: transform .3s linear;
 }
 
+.aparts__item-image:after {
+    content: "";
+    background-color: #2C9DD4;
+}
 
+.aparts__img {
+    width: 100%;
+    display: block;
+    transition: opacity .2s, linear;
+}
