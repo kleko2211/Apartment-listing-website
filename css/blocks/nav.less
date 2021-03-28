@@ -1,0 +1,46 @@
+// main: ../style.less
+
+@import "../vars";
+
+.nav {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  position: relative;
+  margin: 0 1rem;
+  vertical-align: top;
+  color: @dark-grey;
+  transition: color .2s linear;
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @white-smoke;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity, width .3s linear;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background-color: @white-smoke;
+    opacity: 1;
+  }
+}
+
+
