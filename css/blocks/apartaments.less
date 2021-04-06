@@ -1,0 +1,79 @@
+// main: ../style.less
+
+@import "../vars";
+
+.apartments {
+  margin: 2.8rem 0;
+}
+
+.apartments__header {
+  margin: 0 auto 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.apartments__nav {
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+
+.apartments__subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: @dark-grey;
+}
+
+.apartments__title {
+  font-size: 2rem;
+  color: @dark-grey;
+
+  &:after {
+    content: "";
+    display: block;
+    margin: 1rem auto 0;
+    width: 10%;
+    height: 0.2rem;
+    background-color: #9CB1B5;
+  }
+}
+
+
+.apartments__nav-link {
+  position: relative;
+  margin: 0 1rem;
+  padding: 0.3rem;
+  vertical-align: top;
+  color: fade(@dark-grey, 70%);
+  font-size: 1rem;
+  transition: color .2s linear;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @dark-smoke-green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.15rem;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity, width .3s linear;
+  }
+
+  &:hover:after {
+    width: 100%;
+    background-color: @dark-smoke-green;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,65 @@
+// main: ../style.less
+
+@import "../vars";
+
+.footer {
+  padding: 5px 0;
+  background-color: #9FB3B7;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__block {
+  padding: 2em;
+  width: 33.333333%;
+  text-align: center;
+}
+
+.footer__title {
+  margin-bottom: .5em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+.address, .telephones {
+  display: flex;
+  flex-direction: column;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+  border: 2px solid @white-smoke;
+  border-radius: .2em;
+  transition: background-color .2s linear;
+  cursor: pointer;
+}
+
+.social__icon {
+  display: block;
+  fill: @white-smoke;
+  height: 1.7em;
+  transition: fill .2s linear;
+}
+
+.social__item:hover {
+  background-color: white;
+}
+
+.social__icon:hover {
+  fill: #647678;
+}

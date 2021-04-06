@@ -1,0 +1,111 @@
+// main: ../style.less
+
+@import "../vars";
+
+.modal-apartment {
+  display: flex;
+}
+
+.modal-apartment__preview {
+  width: 55%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.modal-apartment__photo {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  object-fit: cover;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.modal-apartment__content-container {
+  padding: 1rem;
+  width: 45%;
+}
+
+.modal-apartment__title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.modal-apartment__info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.info__item {
+  width: 86px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info__icon {
+  margin: 0;
+  height: 35px;
+  width: 35px;
+}
+
+.info__description {
+  margin: 0;
+  vertical-align: center;
+  width: 145px;
+  text-align: center;
+  font-size: 1rem;
+  color: @dark-grey;
+}
+
+.modal-apartment__category {
+  margin-bottom: 1rem;
+  color: @dark-grey;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modal-apartment__items {
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.modal-apartment__item {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  margin-right: .5rem;
+  align-items: center;
+  margin-bottom: .5rem;
+}
+
+.item__icon {
+  margin-right: .4rem;
+  width: 35px;
+  height: 35px;
+}
+
+.apartments__icon {
+  display: block;
+  fill: @dark-grey;
+  height: 1.7em;
+}
+
+.item__description {
+  margin: 0;
+  vertical-align: center;
+  width: 145px;
+  font-size: 1rem;
+  color: @dark-grey;
+}

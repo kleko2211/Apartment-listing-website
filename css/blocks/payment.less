@@ -1,0 +1,85 @@
+// main: ../../payment/payment.less
+
+@import "../vars";
+
+.header-logo__link {
+
+  &:hover {
+    color: @dark-purple;
+  }
+}
+
+.nav__link {
+
+  &:hover {
+    color: @purple;
+  }
+
+  &:hover:after {
+    background-color: @purple;
+  }
+}
+
+.checked {
+    color: @purple;
+    pointer-events: none;
+}
+
+.payment {
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+  min-height: calc(100vh - 150px);
+  background: url("@{imagesPath}payment-intro-image.jpeg") top left no-repeat;
+  background-size: cover;
+}
+
+.payment__inner {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.payment__content-left {
+  max-width: 45%;
+}
+
+.payment__content-right {
+  padding: 1rem;
+  max-width: 55%;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.payment__title {
+  margin-bottom: 1.5rem;
+  color: @dark-grey;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.payment__description {
+  margin-bottom: 1rem;
+  color: @dark-grey;
+  font-size: 1rem;
+}
+
+.payment__items {
+  text-align: center;
+  color: @dark-grey;
+}
+
+.payment__item-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.attention {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.footer {
+  background-color: @purple !important;
+}

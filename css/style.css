@@ -1,0 +1,478 @@
+html {
+  font-size: 15px;
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* Block */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.header {
+  padding-top: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333333;
+}
+.header-logo__link {
+  text-decoration: none;
+  color: #333333;
+  transition: color 0.2s linear;
+}
+.header-logo__link:hover {
+  color: #F5F5F5;
+}
+.header-logo__link:focus {
+  outline: none;
+}
+.nav {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.nav__link {
+  position: relative;
+  margin: 0 1rem;
+  vertical-align: top;
+  color: #333333;
+  transition: color 0.2s linear;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav__link:hover {
+  color: #F5F5F5;
+}
+.nav__link:focus {
+  outline: none;
+}
+.nav__link:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.1rem;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity, width 0.3s linear;
+}
+.nav__link:hover:after {
+  width: 100%;
+  background-color: #F5F5F5;
+  opacity: 1;
+}
+.intro {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, rgba(50, 111, 111, 0.4) 7%, rgba(184, 200, 201, 0.6) 73%), url("../img/main-intro-image.jpg"), center no-repeat;
+  background-size: cover;
+  margin-bottom: 1em;
+}
+.intro__inner {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  max-width: 800px;
+}
+.intro__subtitle {
+  margin-bottom: 1rem;
+  color: #F5F5F5;
+  font-family: 'Caveat', cursive;
+  font-size: 4rem;
+  text-space: 1.5;
+}
+.intro__title {
+  color: #F5F5F5;
+  font-size: 6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+.intro__title:after {
+  content: "";
+  display: block;
+  margin: 4rem auto 4rem;
+  width: 7rem;
+  height: 0.3rem;
+  background-color: #F5F5F5;
+}
+.intro__btn {
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: inline-block;
+  vertical-align: top;
+  color: #F5F5F5;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid #F5F5F5;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s linear, color 0.2s linear;
+}
+.intro__btn:hover {
+  background-color: #F5F5F5;
+  color: #333333;
+}
+.slider {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.intro__slider-items {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto 0;
+}
+.intro__slider-item {
+  position: relative;
+  padding: 1rem 0;
+  display: inline-block;
+  color: #333;
+  list-style-type: none;
+  font-size: 1.2rem;
+  width: 20%;
+  text-align: left;
+  text-transform: uppercase;
+  border-top: 0.2rem solid #F5F5F5;
+}
+.apartments {
+  margin: 2.8rem 0;
+}
+.apartments__header {
+  margin: 0 auto 1rem;
+  width: 100%;
+  text-align: center;
+}
+.apartments__nav {
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+.apartments__subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: #333333;
+}
+.apartments__title {
+  font-size: 2rem;
+  color: #333333;
+}
+.apartments__title:after {
+  content: "";
+  display: block;
+  margin: 1rem auto 0;
+  width: 10%;
+  height: 0.2rem;
+  background-color: #9CB1B5;
+}
+.apartments__nav-link {
+  position: relative;
+  margin: 0 1rem;
+  padding: 0.3rem;
+  vertical-align: top;
+  color: rgba(51, 51, 51, 0.7);
+  font-size: 1rem;
+  transition: color 0.2s linear;
+  text-decoration: none;
+  cursor: pointer;
+}
+.apartments__nav-link:hover {
+  color: #647678;
+}
+.apartments__nav-link:focus {
+  outline: none;
+}
+.apartments__nav-link:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.15rem;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity, width 0.3s linear;
+}
+.apartments__nav-link:hover:after {
+  width: 100%;
+  background-color: #647678;
+  opacity: 1;
+}
+.apartments__item {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s linear;
+  cursor: pointer;
+}
+.apartments__item:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.3s linear;
+}
+.apartments__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.apartments__content {
+  padding: 1rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333333;
+  background-color: white;
+  text-transform: uppercase;
+}
+.apartments__item_caption {
+  font-size: 1rem;
+  color: #333333;
+}
+.apartments__item_price {
+  font-size: 1rem;
+  color: #333333;
+  font-weight: 700;
+}
+.apartments__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem 2.8rem;
+}
+.apartments__col {
+  flex-basis: 33.33333%;
+  padding: 1rem;
+}
+.footer {
+  padding: 5px 0;
+  background-color: #9FB3B7;
+}
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__block {
+  padding: 2em;
+  width: 33.333333%;
+  text-align: center;
+}
+.footer__title {
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.address,
+.telephones {
+  display: flex;
+  flex-direction: column;
+}
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social__item {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+  border: 2px solid #F5F5F5;
+  border-radius: 0.2em;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+.social__icon {
+  display: block;
+  fill: #F5F5F5;
+  height: 1.7em;
+  transition: fill 0.2s linear;
+}
+.social__item:hover {
+  background-color: white;
+}
+.social__icon:hover {
+  fill: #647678;
+}
+.modal {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 0 1rem 0 1rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(49, 49, 49, 0.8);
+  overflow: auto;
+  z-index: 10;
+}
+.modal__dialog {
+  width: 100%;
+  margin: auto;
+  background-color: #F5F5F5;
+  position: relative;
+}
+.modal__close {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  transition: transform 0.2s linear;
+}
+.modal__close:hover {
+  transform: rotate(90deg);
+}
+.modal__close:focus {
+  outline: none;
+}
+.modal__close img {
+  width: 30px;
+  height: 30px;
+}
+.modal-apartment {
+  display: flex;
+}
+.modal-apartment__preview {
+  width: 55%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.modal-apartment__photo {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  object-fit: cover;
+  transform: translate3d(-50%, -50%, 0);
+}
+.modal-apartment__content-container {
+  padding: 1rem;
+  width: 45%;
+}
+.modal-apartment__title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.modal-apartment__info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.info__item {
+  width: 86px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.info__icon {
+  margin: 0;
+  height: 35px;
+  width: 35px;
+}
+.info__description {
+  margin: 0;
+  vertical-align: center;
+  width: 145px;
+  text-align: center;
+  font-size: 1rem;
+  color: #333333;
+}
+.modal-apartment__category {
+  margin-bottom: 1rem;
+  color: #333333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.modal-apartment__items {
+  padding: 0;
+  margin-top: 1rem;
+}
+.modal-apartment__item {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.item {
+  display: flex;
+  margin-right: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.item__icon {
+  margin-right: 0.4rem;
+  width: 35px;
+  height: 35px;
+}
+.apartments__icon {
+  display: block;
+  fill: #333333;
+  height: 1.7em;
+}
+.item__description {
+  margin: 0;
+  vertical-align: center;
+  width: 145px;
+  font-size: 1rem;
+  color: #333333;
+}
+.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

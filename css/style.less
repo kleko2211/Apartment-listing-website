@@ -1,0 +1,42 @@
+// compress: true;
+
+@import "vars";
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: @dark-grey;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Block */
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/intro";
+@import "blocks/apartaments";
+@import "blocks/apartments__item";
+@import "blocks/apartments__items";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-apartment";
+@import "blocks/helpers";
