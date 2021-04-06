@@ -12,6 +12,10 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: @dark-grey;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 *,
@@ -30,5 +34,9 @@ h1, h2, h3, h4, h5, h6 {
 @import "blocks/nav";
 @import "blocks/intro";
 @import "blocks/apartaments";
-@import "blocks/apartaments__header";
 @import "blocks/apartments__item";
+@import "blocks/apartments__items";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-apartment";
+@import "blocks/helpers";

@@ -3,25 +3,43 @@
 @import "../vars";
 
 .apartments__item {
-  padding: 0;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 4px fade(@dark-grey, 25%);
+  box-shadow: 0 0 4px fade(#000, 25%);
+  transition: box-shadow .2s linear;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 25px fade(#000, 45%);
+    transition: box-shadow .3s linear;
+  }
 }
 
-.apartments__img {
+.apartments__image {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-
-.apartments__item:hover .apartments__item-image {
-
+.apartments__content {
+  padding: 1rem 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: @dark-grey;
+  background-color: white;
+  text-transform: uppercase;
 }
 
-.apartments__item:hover .apartments__item-image .apartments__img {
-  opacity: .1;
+.apartments__item_caption {
+  font-size: 1rem;
+  color: @dark-grey;
+}
+
+.apartments__item_price {
+  font-size: 1rem;
+  color: @dark-grey;
+  font-weight: 700;
 }
 
 

@@ -1,0 +1,37 @@
+// compress: true;
+
+@import "../css/vars";
+
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: @dark-grey;
+  background-color: @white-smoke;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Block */
+@import "../css/blocks/container";
+@import "../css/blocks/header";
+@import "../css/blocks/nav";
+@import "../css/blocks/about-us";
+@import "../css/blocks/footer";

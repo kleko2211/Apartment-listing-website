@@ -1,0 +1,60 @@
+// main: ../../about-us/about-us.less
+
+@import "../../css/vars";
+
+.header-logo__link {
+
+  &:hover {
+    color: @orange;
+  }
+}
+
+.nav__link {
+
+  &:hover {
+    color: @orange;
+  }
+
+  &:hover:after {
+    background-color: @orange;
+  }
+}
+
+
+.checked {
+  color: @orange;
+  pointer-events: none;
+}
+
+.about-us {
+  padding-top: 9rem;
+  padding-bottom: 2rem;
+  min-height: calc(100vh - 150px);
+  background: url("@{imagesPath}about-us-intro-image.jpg") top left no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+}
+
+.about-us__content {
+  font-size: 1rem;
+  color: @dark-grey;
+  padding: 1rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.about-us__title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.about-us__par {
+  color: @dark-grey;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: @orange !important;
+}
