@@ -7,10 +7,10 @@
 }
 
 .modal-apartment__preview {
-  width: 55%;
+  width: 50%;
   position: relative;
   overflow: hidden;
-  display: flex;
+  background-color: @dark-grey;
 }
 
 .modal-apartment__photo {
@@ -18,39 +18,41 @@
   width: 100%;
   top: 50%;
   left: 50%;
-  z-index: 1;
   object-fit: cover;
   transform: translate3d(-50%, -50%, 0);
 }
 
 .modal-apartment__content-container {
-  padding: 1rem;
-  width: 45%;
+  padding: 1.3rem;
+  margin-bottom: 2rem;
+  width: 50%;
 }
 
 .modal-apartment__title {
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 .modal-apartment__info {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .info__item {
-  width: 86px;
+  justify-content: center;
+  margin: .2rem;
+  width: 85px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .info__icon {
   margin: 0;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 
 .info__description {
@@ -63,7 +65,7 @@
 }
 
 .modal-apartment__category {
-  margin-bottom: 1rem;
+  //margin-bottom: 2rem;
   color: @dark-grey;
   font-size: 1.1rem;
   font-weight: 600;
@@ -76,7 +78,6 @@
 }
 
 .modal-apartment__item {
-  margin: 0;
   list-style-type: none;
   display: flex;
   justify-content: left;
@@ -92,8 +93,8 @@
 
 .item__icon {
   margin-right: .4rem;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .apartments__icon {
@@ -108,4 +109,27 @@
   width: 145px;
   font-size: 1rem;
   color: @dark-grey;
+}
+
+.oder__btn {
+  position: absolute;
+  padding: .2rem .3rem;
+  margin: .5rem;
+  right:  0;
+  bottom: 0.4rem;
+  font-size: 1rem;
+  color: @dark-grey;
+  background-color: @white-smoke;
+  opacity: .6;
+  border: 2px solid @dark-grey;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transform: translateX(calc(-410px + 50%));
+  text-decoration: none;
+  transition: color, background-color 0.3s linear;
+
+  &:hover {
+    color: @white-smoke;
+    background-color: @dark-grey;
+  }
 }

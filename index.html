@@ -668,12 +668,36 @@
                     <a class="header-logo__link" href="index.html">VIATUR</a>
                 </div>
                 <nav class="nav">
-                    <a class="nav__link" href="about-us/index.html" tabindex="1" title="О нас">О нас</a>
-                    <a class="nav__link" href="payment/index.html" tabindex="2" title="Оплата">Оплата</a>
-                    <a class="nav__link" href="#" tabindex="3" title="Партнеры">Партнеры</a>
-                    <a class="nav__link" href="#" tabindex="4" title="Контакты">Контакты</a>
+                    <a
+                            class="nav__link"
+                            href="about-us/index.html"
+                            tabindex="1"
+                            title="О нас">
+                        О нас
+                    </a>
+                    <a
+                            class="nav__link"
+                            href="payment/index.html"
+                            tabindex="2"
+                            title="Оплата">
+                        Оплата
+                    </a>
+                    <a
+                            class="nav__link"
+                            href="#"
+                            tabindex="3"
+                            title="Партнеры">
+                        Партнеры
+                    </a>
+                    <a
+                            class="nav__link"
+                            href="#"
+                            tabindex="4"
+                            title="Контакты">
+                        Контакты
+                    </a>
                 </nav>
-            </div>
+            </div> <!-- /.header__inner -->
         </div> <!-- /.container -->
     </header>
 
@@ -685,7 +709,7 @@
                     <h2 class="intro__subtitle">Место где комфортно</h2>
                     <h1 class="intro__title">Здесь живёт отдых</h1>
                 </div>
-                <a class="intro__btn" role="button">Подобрать апартаменты</a>
+                <a class="intro__btn" id="scroll_bottom" tabindex="5" role="button">Подобрать апартаменты</a>
             </div>
         </div>
     </section>
@@ -702,29 +726,71 @@
     </section>
 
     <!-- Apartments -->
-    <section class="apartments">
+    <section class="apartments" id="anchor">
         <div class="container">
             <div class="apartments__header">
                 <h4 class="apartments__subtitle">Наши апартаменты</h4>
                 <h3 class="apartments__title">Для вас</h3>
 
                 <div class="apartments__nav">
-                    <a href="#" class="apartments__nav-link" data-filter="all">Все</a>
-                    <a href="#" class="apartments__nav-link" data-filter="room1">1 комната</a>
-                    <a href="#" class="apartments__nav-link" data-filter="room2">2 комнаты</a>
-                    <a href="#" class="apartments__nav-link" data-filter="room3">3 комнаты</a>
+                    <a
+                            href="#"
+                            tabindex="6"
+                            title="Все"
+                            class="apartments__nav-link"
+                            data-filter="all">
+                        Все
+                    </a>
+                    <a
+                            href="#"
+                            tabindex="7"
+                            title="1 комната"
+                            class="apartments__nav-link"
+                            data-filter="room1">
+                        1 комната
+                    </a>
+                    <a
+                            href="#"
+                            tabindex="8"
+                            title="2 комнаты"
+                            class="apartments__nav-link"
+                            data-filter="room2">
+                        2 комнаты
+                    </a>
+                    <a
+                            href="#"
+                            tabindex="9"
+                            title="3 комнаты"
+                            class="apartments__nav-link"
+                            data-filter="room3">
+                        3 комнаты
+                    </a>
                 </div>
             </div>
 
             <div class="apartments__items" id="apart__items">
 
-                <div class="apartments__col" data-cat="room3">
+                <div class="apartments__col" data-cat="room3" data-modal="#modal__lenina10">
                     <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/ozeshko-33/ozeshko-33(370x300).jpg"
+                        <img class="apartments__img" src="img/apartments/lenina-10/lenina-10.1(370x300).jpg"
                                 alt="">
                         <div class="apartments__content">
                             <div class="apartments__item_caption">
-                                Апартаменты Ожешко 33
+                                Апартаменты Ленина 10
+                            </div>
+                            <div class="apartments__item_price">
+                                95 BYN
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="apartments__col" data-cat="room3">
+                    <div class="apartments__item">
+                        <img class="apartments__img" src="img/apartments/maja-10/maja-10.1(370x300).jpg" alt="">
+                        <div class="apartments__content">
+                            <div class="apartments__item_caption">
+                                Апартаменты Мая 10
                             </div>
                             <div class="apartments__item_price">
                                 95 BYN
@@ -748,24 +814,9 @@
                     </div>
                 </div>
 
-                <div class="apartments__col" data-cat="room3">
-                    <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/mostovaja-31/mostovaja-31(370x300).jpg"
-                                alt="">
-                        <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Мостовая 31
-                            </div>
-                            <div class="apartments__item_price">
-                                80 BYN
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="apartments__col" data-cat="room1">
                     <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/gagarina2-7/gagarina-27(370x330).jpg"
+                        <img class="apartments__img" src="img/apartments/gagarina-27/gagarina-27(370x330).jpg"
                                 alt="">
                         <div class="apartments__content">
                             <div class="apartments__item_caption">
@@ -793,7 +844,7 @@
                     </div>
                 </div>
 
-                <div class="apartments__col" data-cat="room2">
+                <div class="apartments__col" data-cat="room3">
                     <div class="apartments__item">
                         <img class="apartments__img"
                                 src="img/apartments/sovetskaja-19/sovetskaja-19(370x300).jpg" alt="">
@@ -860,30 +911,71 @@
     </footer>
 
     <!-- Modals -->
-    <div class="modal" style="display: none">
+    <div class="modal" id="modal__lenina10">
         <div class="modal__dialog">
 
-            <button type="button" class="modal__close">
+            <button type="button" class="modal__close" data-close>
                 <img alt="Close" src="img/svg/close.svg">
             </button>
 
             <div class="modal-apartment">
                 <div class="modal-apartment__preview">
-                    <img class="modal-apartment__photo" alt="" src="img/apartments/ozeshko-33/ozeshko-33.1.jpg">
+                    <div id="apartmentSlider">
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.1.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.2.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.3.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.4.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.5.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.6.jpg">
+                        </div>
+                        <div>
+                            <img
+                                    class="modal-apartment__photo"
+                                    alt=""
+                                    src="img/apartments/lenina-10/lenina-10.7.jpg">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="modal-apartment__content-container">
 
-
                     <div class="modal-apartment__text">
 
                         <div class="modal-apartment__header">
-                            <h3 class="modal-apartment__title">Апартаменты Гагарина 27</h3>
+                            <h3 class="modal-apartment__title">Апартаменты Ленина 10</h3>
                         </div>
 
                         <p>Апартаменты с балконом и бесплатным Wi-Fi расположены в городе Гродно. Из окон открывается
-                            прекрасный
-                            вид на город.
+                            прекрасный вид на город.
                         </p>
                         <p>В числе удобств апартаментов 1 спальня, телевизор с плоским экраном и кабельными каналами,
                             оборудованная кухня с микроволновой печью и холодильником, стиральная машина и 1
@@ -1068,14 +1160,14 @@
                         </ul>
 
                     </div> <!-- modal-apartment__text -->
-                </div> <!-- modal-apartment -->
+                    <a class="oder__btn" href="#" role="button" data-role="btn-order">Забронировать</a>
+                </div> <!-- modal-apartment__content-container -->
             </div> <!-- modal-apartment -->
-
         </div> <!-- modal__dialog -->
-
     </div> <!-- modal -->
 
     <!-- JS -->
+    <script src="js/slick.min.js"></script>
     <script src="js/app.js"></script>
 
 </body>

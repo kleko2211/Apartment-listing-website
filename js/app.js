@@ -1,5 +1,7 @@
 $(function() {
 
+    $(document).ready(function(){});
+
     /* Filter
     =====================*/
     let filter = $("[data-filter]");
@@ -23,5 +25,65 @@ $(function() {
             });
         }
     });
+
+
+    /* Modal
+    =====================*/
+    const modalCall = $("[data-modal]");
+    const modalClose = $("[data-close]");
+
+    modalCall.on("click", function(event) {
+        event.preventDefault();
+
+        let $this = $(this);
+        let modalId = $this.data('modal');
+
+        $(modalId).addClass('show');
+        $("body").addClass('no-scroll');
+
+        $('#apartmentSlider').slick('setPosition');
+    });
+
+    modalClose.on("click", function(event) {
+        event.preventDefault();
+
+        let $this = $(this);
+        let modalParent = $this.parents('.modal');
+
+        modalParent.removeClass('show');
+        $("body").removeClass('no-scroll');
+    });
+
+    $(".modal").on("click", function() {
+        $(this).removeClass('show');
+        $("body").removeClass('no-scroll');
+    });
+
+    $(".modal__dialog").on("click", function(event) {
+        event.stopPropagation();
+    });
+
+
+    /* Scroll
+    =====================*/
+    $(function(){
+        $('#scroll_bottom').click(function(){
+            $('html, body').animate({scrollTop: $('#anchor').offset().top }, 600);
+            return false;
+        });
+    });
+
+
+    /* Slider: https://kenwheeler.github.io/slick/
+    =====================*/
+    $('#apartmentSlider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        arrows: false,
+        dots: true,
+    });
+
 });
 

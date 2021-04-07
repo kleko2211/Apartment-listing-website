@@ -7,6 +7,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: #333333;
+  background-color: white;
 }
 body.no-scroll {
   overflow: hidden;
@@ -23,6 +24,132 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+/* Vendor */
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+}
+.slick-dots li {
+  margin: 0.5rem;
+}
+.slick-dots button {
+  width: 11px;
+  height: 11px;
+  border: 2px solid #F5F5F5;
+  border-radius: 50%;
+  padding: 0;
+  background: transparent;
+  background: none;
+  font-size: 0;
+  color: transparent;
+}
+.slick-dots button:hover {
+  background: #F5F5F5;
+}
+.slick-dots button:focus {
+  outline: none;
+}
+.slick-dots button:active {
+  background-color: #F5F5F5;
 }
 /* Block */
 .container {
@@ -246,15 +373,25 @@ h6 {
   background-color: #647678;
   opacity: 1;
 }
+.apartments__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem 2.8rem;
+}
+.apartments__col {
+  flex-basis: 33.33333%;
+  padding: 1rem;
+}
 .apartments__item {
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  background-color: #F5F5F5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.2s linear;
   cursor: pointer;
 }
 .apartments__item:hover {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s linear;
 }
 .apartments__image {
@@ -268,7 +405,7 @@ h6 {
   justify-content: space-between;
   font-size: 1rem;
   color: #333333;
-  background-color: white;
+  background-color: #F5F5F5;
   text-transform: uppercase;
 }
 .apartments__item_caption {
@@ -279,15 +416,6 @@ h6 {
   font-size: 1rem;
   color: #333333;
   font-weight: 700;
-}
-.apartments__items {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -1rem 2.8rem;
-}
-.apartments__col {
-  flex-basis: 33.33333%;
-  padding: 1rem;
 }
 .footer {
   padding: 5px 0;
@@ -343,7 +471,7 @@ h6 {
   fill: #647678;
 }
 .modal {
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -351,11 +479,14 @@ h6 {
   top: 0;
   left: 0;
   background-color: rgba(49, 49, 49, 0.8);
-  overflow: auto;
   z-index: 10;
+  overflow: auto;
+}
+.modal.show {
+  display: flex;
 }
 .modal__dialog {
-  width: 100%;
+  width: 90%;
   margin: auto;
   background-color: #F5F5F5;
   position: relative;
@@ -375,6 +506,7 @@ h6 {
 }
 .modal__close:focus {
   outline: none;
+  background-color: #F5F5F5;
 }
 .modal__close img {
   width: 30px;
@@ -384,44 +516,46 @@ h6 {
   display: flex;
 }
 .modal-apartment__preview {
-  width: 55%;
+  width: 50%;
   position: relative;
   overflow: hidden;
-  display: flex;
+  background-color: #333333;
 }
 .modal-apartment__photo {
   position: absolute;
   width: 100%;
   top: 50%;
   left: 50%;
-  z-index: 1;
   object-fit: cover;
   transform: translate3d(-50%, -50%, 0);
 }
 .modal-apartment__content-container {
-  padding: 1rem;
-  width: 45%;
+  padding: 1.3rem;
+  margin-bottom: 2rem;
+  width: 50%;
 }
 .modal-apartment__title {
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  text-transform: uppercase;
 }
 .modal-apartment__info {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
 }
 .info__item {
-  width: 86px;
+  justify-content: center;
+  margin: 0.2rem;
+  width: 85px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .info__icon {
   margin: 0;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 .info__description {
   margin: 0;
@@ -432,7 +566,6 @@ h6 {
   color: #333333;
 }
 .modal-apartment__category {
-  margin-bottom: 1rem;
   color: #333333;
   font-size: 1.1rem;
   font-weight: 600;
@@ -443,7 +576,6 @@ h6 {
   margin-top: 1rem;
 }
 .modal-apartment__item {
-  margin: 0;
   list-style-type: none;
   display: flex;
   justify-content: left;
@@ -457,8 +589,8 @@ h6 {
 }
 .item__icon {
   margin-right: 0.4rem;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 .apartments__icon {
   display: block;
@@ -472,6 +604,28 @@ h6 {
   font-size: 1rem;
   color: #333333;
 }
+.oder__btn {
+  position: absolute;
+  padding: 0.2rem 0.3rem;
+  margin: 0.5rem;
+  right: 0;
+  bottom: 0.4rem;
+  font-size: 1rem;
+  color: #333333;
+  background-color: #F5F5F5;
+  opacity: 0.6;
+  border: 2px solid #333333;
+  border-radius: 20px;
+  text-transform: uppercase;
+  transform: translateX(calc(-410px + 50%));
+  text-decoration: none;
+  transition: color, background-color 0.3s linear;
+}
+.oder__btn:hover {
+  color: #F5F5F5;
+  background-color: #333333;
+}
+/* Helpers */
 .hide {
   display: none;
 }
