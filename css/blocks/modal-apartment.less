@@ -24,7 +24,6 @@
 
 .modal-apartment__content-container {
   padding: 1.3rem;
-  margin-bottom: 2rem;
   width: 50%;
 }
 
@@ -32,13 +31,20 @@
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
+}
+
+.modal-apartment__par {
+  color: @dark-grey;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .modal-apartment__info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .info__item {
@@ -65,7 +71,6 @@
 }
 
 .modal-apartment__category {
-  //margin-bottom: 2rem;
   color: @dark-grey;
   font-size: 1.1rem;
   font-weight: 600;
@@ -103,7 +108,7 @@
   height: 1.7em;
 }
 
-.item__description {
+.item__cat {
   margin: 0;
   vertical-align: center;
   width: 145px;
@@ -111,12 +116,15 @@
   color: @dark-grey;
 }
 
-.oder__btn {
-  position: absolute;
-  padding: .2rem .3rem;
-  margin: .5rem;
-  right:  0;
-  bottom: 0.4rem;
+.modal-apartment__footer {
+  width: 100%;
+  margin-bottom: .2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-apartment__btn {
+  padding: .2rem .5rem;
   font-size: 1rem;
   color: @dark-grey;
   background-color: @white-smoke;
@@ -124,12 +132,15 @@
   border: 2px solid @dark-grey;
   border-radius: 20px;
   text-transform: uppercase;
-  transform: translateX(calc(-410px + 50%));
   text-decoration: none;
   transition: color, background-color 0.3s linear;
 
   &:hover {
     color: @white-smoke;
     background-color: @dark-grey;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

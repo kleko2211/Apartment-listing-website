@@ -120,6 +120,12 @@
 
     li {
         margin: .5rem;
+
+        &.slick-active  {
+            button {
+                background-color: @white-smoke;
+            }
+        }
     }
 
     button {
@@ -133,17 +139,10 @@
 
         font-size: 0;
         color: transparent;
-
-        &:hover {
-            background: @white-smoke;
-        }
+        cursor: pointer;
 
         &:focus {
             outline: none;
-        }
-
-        &:active {
-            background-color: @white-smoke;
         }
     }
 }

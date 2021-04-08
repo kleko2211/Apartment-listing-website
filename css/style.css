@@ -131,6 +131,9 @@ h6 {
 .slick-dots li {
   margin: 0.5rem;
 }
+.slick-dots li.slick-active button {
+  background-color: #F5F5F5;
+}
 .slick-dots button {
   width: 11px;
   height: 11px;
@@ -141,15 +144,10 @@ h6 {
   background: none;
   font-size: 0;
   color: transparent;
-}
-.slick-dots button:hover {
-  background: #F5F5F5;
+  cursor: pointer;
 }
 .slick-dots button:focus {
   outline: none;
-}
-.slick-dots button:active {
-  background-color: #F5F5F5;
 }
 /* Block */
 .container {
@@ -285,29 +283,8 @@ h6 {
   background-color: #F5F5F5;
   color: #333333;
 }
-.slider {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.intro__slider-items {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  margin: 5rem auto 0;
-}
-.intro__slider-item {
-  position: relative;
-  padding: 1rem 0;
-  display: inline-block;
-  color: #333;
-  list-style-type: none;
-  font-size: 1.2rem;
-  width: 20%;
-  text-align: left;
-  text-transform: uppercase;
-  border-top: 0.2rem solid #F5F5F5;
+.intro__btn:focus {
+  outline: none;
 }
 .apartments {
   margin: 2.8rem 0;
@@ -371,7 +348,7 @@ h6 {
 .apartments__nav-link:hover:after {
   width: 100%;
   background-color: #647678;
-  opacity: 1;
+  opacity: 0.7;
 }
 .apartments__items {
   display: flex;
@@ -531,19 +508,24 @@ h6 {
 }
 .modal-apartment__content-container {
   padding: 1.3rem;
-  margin-bottom: 2rem;
   width: 50%;
 }
 .modal-apartment__title {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
+}
+.modal-apartment__par {
+  color: #333333;
+  font-size: 1rem;
+  text-align: justify;
 }
 .modal-apartment__info {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .info__item {
   justify-content: center;
@@ -597,19 +579,21 @@ h6 {
   fill: #333333;
   height: 1.7em;
 }
-.item__description {
+.item__cat {
   margin: 0;
   vertical-align: center;
   width: 145px;
   font-size: 1rem;
   color: #333333;
 }
-.oder__btn {
-  position: absolute;
-  padding: 0.2rem 0.3rem;
-  margin: 0.5rem;
-  right: 0;
-  bottom: 0.4rem;
+.modal-apartment__footer {
+  width: 100%;
+  margin-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-apartment__btn {
+  padding: 0.2rem 0.5rem;
   font-size: 1rem;
   color: #333333;
   background-color: #F5F5F5;
@@ -617,13 +601,15 @@ h6 {
   border: 2px solid #333333;
   border-radius: 20px;
   text-transform: uppercase;
-  transform: translateX(calc(-410px + 50%));
   text-decoration: none;
   transition: color, background-color 0.3s linear;
 }
-.oder__btn:hover {
+.modal-apartment__btn:hover {
   color: #F5F5F5;
   background-color: #333333;
+}
+.modal-apartment__btn:focus {
+  outline: none;
 }
 /* Helpers */
 .hide {
