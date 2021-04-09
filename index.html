@@ -661,13 +661,13 @@
     </svg>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <div class="header-logo">
+                <div class="header-logo" data-scroll="#intro">
                     <a class="header-logo__link" href="index.html">VIATUR</a>
                 </div>
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a
                             class="nav__link"
                             href="about-us/index.html"
@@ -697,12 +697,16 @@
                         Контакты
                     </a>
                 </nav>
+
+                <button type="button" class="burger" id="burger">
+                    <span class="burger__item">Menu</span>
+                </button>
             </div> <!-- /.header__inner -->
         </div> <!-- /.container -->
     </header>
 
     <!-- Intro -->
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
                 <div class="intro__content">
@@ -728,6 +732,7 @@
     <!-- Apartments -->
     <section class="apartments" id="anchor">
         <div class="container">
+
             <div class="apartments__header">
                 <h4 class="apartments__subtitle">Наши апартаменты</h4>
                 <h3 class="apartments__title">Для вас</h3>
@@ -738,7 +743,8 @@
                             tabindex="6"
                             title="Все"
                             class="apartments__nav-link"
-                            data-filter="all">
+                            data-filter="all"
+                    >
                         Все
                     </a>
                     <a
@@ -746,7 +752,8 @@
                             tabindex="7"
                             title="1 комната"
                             class="apartments__nav-link"
-                            data-filter="room1">
+                            data-filter="room1"
+                    >
                         1 комната
                     </a>
                     <a
@@ -754,7 +761,8 @@
                             tabindex="8"
                             title="2 комнаты"
                             class="apartments__nav-link"
-                            data-filter="room2">
+                            data-filter="room2"
+                    >
                         2 комнаты
                     </a>
                     <a
@@ -762,7 +770,8 @@
                             tabindex="9"
                             title="3 комнаты"
                             class="apartments__nav-link"
-                            data-filter="room3">
+                            data-filter="room3"
+                    >
                         3 комнаты
                     </a>
                 </div>
@@ -770,76 +779,67 @@
 
             <div class="apartments__items" id="apart__items">
 
-                <div class="apartments__col" data-cat="room2" data-modal="#modal__lenina10">
-                    <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/lenina-10/lenina-10.1(370x300).jpg"
-                                alt="">
+                <div class="apartments__col" data-cat="room2">
+                    <div class="apartments__item" data-modal="#modal__lenina10">
+                        <img class="apartments__img" src="img/apartments/lenina-10/lenina-10.1(370x300).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Ленина 10
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Ленина 10</div>
                             </div>
-                            <div class="apartments__item_price">
-                                95 BYN
-                            </div>
+                            <div class="apartments__content_price">95 BYN</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="apartments__col" data-cat="room3" data-modal="#modal__maja10">
-                    <div class="apartments__item">
+                <div class="apartments__col" data-cat="room3">
+                    <div class="apartments__item" data-modal="#modal__maja10">
                         <img class="apartments__img" src="img/apartments/maja-10/maja-10.1(370x300).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Мая 10
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Мая 10</div>
                             </div>
-                            <div class="apartments__item_price">
-                                100 BYN
-                            </div>
+                            <div class="apartments__content_price">100 BYN</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="apartments__col" data-cat="room2" data-modal="#modal__ozeshko34">
-                    <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/ozeshko-34/ozeshko-34(370x300).jpg"
-                                alt="">
+                <div class="apartments__col" data-cat="room2">
+                    <div class="apartments__item" data-modal="#modal__ozeshko34">
+                        <img class="apartments__img" src="img/apartments/ozeshko-34/ozeshko-34(370x300).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Ожешко 34
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Ожешко 34</div>
                             </div>
-                            <div class="apartments__item_price">
-                                120 BYN
-                            </div>
+                            <div class="apartments__content_price">95 BYN</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="apartments__col" data-cat="room1">
                     <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/gagarina-27/gagarina-27(370x330).jpg"
-                                alt="">
+                        <img class="apartments__img" src="img/apartments/gagarina-27/gagarina-27(370x330).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Гагарина 27
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Гагарина 27</div>
                             </div>
-                            <div class="apartments__item_price">
-                                90 BYN
-                            </div>
+                            <div class="apartments__content_price">90 BYN</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="apartments__col" data-cat="room2">
                     <div class="apartments__item">
-                        <img class="apartments__img" src="img/apartments/lidskaja-43/lidskaja-43(370x300).jpg"
-                                alt="">
+                        <img class="apartments__img" src="img/apartments/lidskaja-43/lidskaja-43(370x300).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Лидская 43
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Лидская 43</div>
                             </div>
-                            <div class="apartments__item_price">
-                                70 BYN
-                            </div>
+                            <div class="apartments__content_price">70 BYN</div>
                         </div>
                     </div>
                 </div>
@@ -849,12 +849,11 @@
                         <img class="apartments__img"
                                 src="img/apartments/sovetskaja-19/sovetskaja-19(370x300).jpg" alt="">
                         <div class="apartments__content">
-                            <div class="apartments__item_caption">
-                                Апартаменты Советская 19
+                            <div class="apartments__content-name">
+                                <div class="apartments__content-cat">Апартаменты</div>
+                                <div class="apartments__content-description">Советская 19</div>
                             </div>
-                            <div class="apartments__item_price">
-                                110 BYN
-                            </div>
+                            <div class="apartments__content_price">110 BYN</div>
                         </div>
                     </div>
                 </div>
@@ -965,7 +964,6 @@
                                     src="img/apartments/lenina-10/lenina-10.7.jpg">
                         </div>
                     </div>
-
 
                 </div>
 

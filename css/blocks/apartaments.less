@@ -13,6 +13,7 @@
 }
 
 .apartments__nav {
+  width: 100%;
   display: flex;
   justify-content: center;
   margin: 1.4rem 0;
@@ -37,7 +38,6 @@
     background-color: #9CB1B5;
   }
 }
-
 
 .apartments__nav-link {
   position: relative;
@@ -74,6 +74,15 @@
   &:hover:after {
     width: 100%;
     background-color: @dark-smoke-green;
-    opacity: 1;
+    opacity: 0.7;
+  }
+
+  @media @mobile-sm {
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    margin: 0 .6rem;
+    padding: .3rem;
+
   }
 }

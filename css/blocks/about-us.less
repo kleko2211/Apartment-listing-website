@@ -20,7 +20,6 @@
   }
 }
 
-
 .checked {
   color: @orange;
   pointer-events: none;
@@ -33,6 +32,11 @@
   background: url("@{imagesPath}about-us-intro-image.jpg") top left no-repeat;
   background-size: cover;
   font-size: 1rem;
+
+  @media @tablet {
+    background: url("@{imagesPath}about-us-intro-image(991x862).jpg") top left no-repeat;
+    background-size: cover;
+  }
 }
 
 .about-us__content {

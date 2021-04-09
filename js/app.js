@@ -1,8 +1,38 @@
 $(function () {
 
+    $(document).ready(function () {
+    });
+
     const apartmentSlider = $('[data-slider="slick"]');
 
-    $(document).ready(function () {
+    let header = $("#header"),
+        introH = $("#intro").innerHeight(),
+        scrollOffset = $(window).scrollTop();
+
+
+    /* Fixed Header */
+    checkScroll(scrollOffset);
+
+    $(window).on("scroll", function() {
+        scrollOffset = $(this).scrollTop();
+
+        checkScroll(scrollOffset);
+    });
+
+    function checkScroll(scrollOffset) {
+        if( scrollOffset >= introH ) {
+            header.addClass("fixed");
+        } else {
+            header.removeClass("fixed");
+        }
+    }
+
+    /* Menu nav toggle */
+    $("#burger").on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+        $("#nav").toggleClass("active");
     });
 
     /* Filter
@@ -72,7 +102,6 @@ $(function () {
     $(function () {
         $('#scroll_bottom').click(function () {
             $('html, body').animate({scrollTop: $('#anchor').offset().top}, 600);
-            return false;
         });
     });
 
@@ -92,7 +121,7 @@ $(function () {
         event.preventDefault();
     });
 
-    $(".slickPrev").on("click", function(event) {
+    $(".slickPrev").on("click", function (event) {
         event.preventDefault();
 
         let currentSlider = $(this).parents('.modal').find(apartmentSlider);
@@ -100,7 +129,7 @@ $(function () {
         currentSlider.slick("slickPrev");
     });
 
-    $(".slickNext").on("click", function(event) {
+    $(".slickNext").on("click", function (event) {
         event.preventDefault();
 
         let currentSlider = $(this).parents('.modal').find(apartmentSlider);
