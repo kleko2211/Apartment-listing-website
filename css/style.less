@@ -12,6 +12,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: @dark-grey;
+  background-color: white;
 
   &.no-scroll {
     overflow: hidden;
@@ -28,15 +29,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Vendor */
+@import "vendor/slick";
+
 /* Block */
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/nav";
 @import "blocks/intro";
 @import "blocks/apartaments";
-@import "blocks/apartments__item";
 @import "blocks/apartments__items";
+@import "blocks/apartments__item";
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/modal-apartment";
+@import "blocks/burger";
+
+/* Helpers */
 @import "blocks/helpers";

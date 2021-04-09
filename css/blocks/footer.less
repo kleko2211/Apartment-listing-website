@@ -10,12 +10,27 @@
 .footer__inner {
   display: flex;
   flex-wrap: wrap;
+
+  @media @mobile-sm {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .footer__block {
   padding: 2em;
   width: 33.333333%;
   text-align: center;
+
+
+  @media @mobile {
+    padding: .7rem;
+  }
+
+  @media @mobile-sm {
+    padding: .5rem;
+    width: 100%;
+  }
 }
 
 .footer__title {
@@ -23,6 +38,18 @@
   font-size: 1rem;
   text-transform: uppercase;
   color: whitesmoke;
+
+  @media @tablet {
+    font-size: 1rem;
+  }
+}
+
+.footer__subtitle {
+  font-size: 1rem;
+
+  @media @mobile {
+    font-size: .9rem;
+  }
 }
 
 .address, .telephones {

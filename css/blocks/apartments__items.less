@@ -5,10 +5,19 @@
 .apartments__items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin: 0 -1rem 2.8rem;
 }
 
 .apartments__col {
-  flex-basis: 33.33333%;
+  flex-basis: 33.3333%;
   padding: 1rem;
+
+  @media @mobile {
+    flex-basis: 50%;
+  }
+
+  @media @mobile-sm {
+    flex-basis: 100%;
+  }
 }

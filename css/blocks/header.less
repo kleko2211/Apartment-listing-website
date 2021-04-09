@@ -34,6 +34,22 @@
   &:focus {
     outline: none;
   }
+}
 
+.header.fixed {
+  background: #92A0A2;
+  text-align: center;
+  position: fixed;
+  padding: .6rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 300;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+}
 
+.header.active {
+  background-color: @white-smoke;
+  padding: 0;
 }

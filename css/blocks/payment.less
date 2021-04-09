@@ -37,6 +37,10 @@
 .payment__inner {
   display: flex;
   flex-direction: row-reverse;
+
+  @media @mobile {
+    flex-direction: row;
+  }
 }
 
 .payment__content-left {

@@ -61,11 +61,40 @@ h6 {
 .header-logo__link:focus {
   outline: none;
 }
+.header.fixed {
+  background: #92A0A2;
+  text-align: center;
+  position: fixed;
+  padding: 0.6rem 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 300;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.header.active {
+  background-color: #F5F5F5;
+  padding: 0;
+}
 .nav {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #AFB3B3;
+    z-index: 150;
+    width: 100%;
+  }
 }
 .nav__link {
   position: relative;
@@ -88,7 +117,7 @@ h6 {
   width: 0;
   height: 0.1rem;
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 0;
   z-index: 1;
   opacity: 0;
@@ -98,6 +127,17 @@ h6 {
   width: 100%;
   background-color: #F5F5F5;
   opacity: 1;
+}
+@media (max-width: 767px) {
+  .nav__link {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+  }
+}
+.nav.active {
+  display: block;
 }
 .header-logo__link:hover {
   color: #f1913a;
@@ -119,6 +159,12 @@ h6 {
   background: url("../img/about-us-intro-image.jpg") top left no-repeat;
   background-size: cover;
   font-size: 1rem;
+}
+@media (max-width: 991px) {
+  .about-us {
+    background: url("../img/about-us-intro-image(991x862).jpg") top left no-repeat;
+    background-size: cover;
+  }
 }
 .about-us__content {
   font-size: 1rem;
@@ -148,16 +194,46 @@ h6 {
   display: flex;
   flex-wrap: wrap;
 }
+@media (max-width: 565px) {
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer__block {
   padding: 2em;
   width: 33.333333%;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .footer__block {
+    padding: 0.7rem;
+  }
+}
+@media (max-width: 565px) {
+  .footer__block {
+    padding: 0.5rem;
+    width: 100%;
+  }
 }
 .footer__title {
   margin-bottom: 0.5em;
   font-size: 1rem;
   text-transform: uppercase;
   color: whitesmoke;
+}
+@media (max-width: 991px) {
+  .footer__title {
+    font-size: 1rem;
+  }
+}
+.footer__subtitle {
+  font-size: 1rem;
+}
+@media (max-width: 767px) {
+  .footer__subtitle {
+    font-size: 0.9rem;
+  }
 }
 .address,
 .telephones {

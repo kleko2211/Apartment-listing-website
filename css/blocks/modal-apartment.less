@@ -7,10 +7,10 @@
 }
 
 .modal-apartment__preview {
-  width: 55%;
+  width: 50%;
   position: relative;
   overflow: hidden;
-  display: flex;
+  background-color: @dark-grey;
 }
 
 .modal-apartment__photo {
@@ -18,39 +18,47 @@
   width: 100%;
   top: 50%;
   left: 50%;
-  z-index: 1;
   object-fit: cover;
   transform: translate3d(-50%, -50%, 0);
 }
 
 .modal-apartment__content-container {
-  padding: 1rem;
-  width: 45%;
+  padding: 1.3rem;
+  width: 50%;
 }
 
 .modal-apartment__title {
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.modal-apartment__par {
+  color: @dark-grey;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .modal-apartment__info {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.info__item {
-  width: 86px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.info__item {
+  justify-content: center;
+  margin: .2rem;
+  width: 85px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .info__icon {
   margin: 0;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
 }
 
 .info__description {
@@ -63,7 +71,6 @@
 }
 
 .modal-apartment__category {
-  margin-bottom: 1rem;
   color: @dark-grey;
   font-size: 1.1rem;
   font-weight: 600;
@@ -76,7 +83,6 @@
 }
 
 .modal-apartment__item {
-  margin: 0;
   list-style-type: none;
   display: flex;
   justify-content: left;
@@ -92,8 +98,8 @@
 
 .item__icon {
   margin-right: .4rem;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .apartments__icon {
@@ -102,10 +108,39 @@
   height: 1.7em;
 }
 
-.item__description {
+.item__cat {
   margin: 0;
   vertical-align: center;
   width: 145px;
   font-size: 1rem;
   color: @dark-grey;
+}
+
+.modal-apartment__footer {
+  width: 100%;
+  margin-bottom: .2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-apartment__btn {
+  padding: .2rem .5rem;
+  font-size: 1rem;
+  color: @dark-grey;
+  background-color: @white-smoke;
+  opacity: .6;
+  border: 2px solid @dark-grey;
+  border-radius: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color, background-color 0.3s linear;
+
+  &:hover {
+    color: @white-smoke;
+    background-color: @dark-grey;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
